@@ -69,7 +69,7 @@ _includes	_posts		_site		css		index.html
 └── index.html  # トップページ
 ```
 
-### YAML Front Matter
+## YAML Front Matter
 
 Jekyll では、ファイルの先頭にハイフン3つで囲まれた正しいYAML形式のブロックがあると、それを特別なファイルと認識して処理します。このブロック部分をFront Matterと呼びます。
 
@@ -84,7 +84,7 @@ layout: default
 ここでは layout に default を指定しているので、この index.html では _layout/default.html が利用されます。
 
 
-### Liquid template language
+## Liquid template language
 
 index.html 全体を見てみましょう。
 
@@ -114,7 +114,7 @@ layout: default
 </div>
 ```
 
-YAML Front Matter に続いてコンテンツ部分である <div> タグがあります。
+YAML Front Matter に続いてコンテンツ部分である &lt;div&gt; タグがあります。
 この中に ```{% for post in site.posts %}``` や ```{{ post.date | date: "%b %-d, %Y" }}``` という {} を使った記述があります。
 この部分は Liquid template language です。
 
@@ -123,12 +123,12 @@ YAML Front Matter に続いてコンテンツ部分である <div> タグがあ�
 
 ```{% for post in site.posts %}...{% endfor %}``` は Liquid template language の Tag、```{{ post.title }}``` は Object、```{{ post.date | date: "%b %-d, %Y" }}``` は Filter です。
 
-ここの処理では、site.posts の数だけ <li> タグを作るようになっています。
+ここの処理では、site.posts の数だけ &lt;li&gt; タグを作るようになっています。
 
 
 
 
-### Templates
+## Templates
 
 テンプレートファイルは _layout ディレクトリに置きます。テンプレートファイルの中の ```{{ content }}``` 部分が、そのテンプレートを利用するコンテンツに置き換わります。
 
@@ -162,7 +162,7 @@ _layout/default.html を見ると次のようになっており、```{{ content 
 ```{% include head.html %}``` と記述すると、この部分が _includes/head.html に置き換わります。
 
 
-### SASS
+## SASS
 
 Jekyll では YAML Front Matter がついたSASSファイル（.scss ファイル）をCSSに変換してくれます。
 
@@ -188,7 +188,7 @@ css/main.scss の最後には @import で外部の SASS ファイルが指定さ
 
 
 
-### Post
+## Post
 
 * [The Posts Folder](https://jekyllrb.com/docs/posts/)
 
@@ -207,8 +207,7 @@ YYY-MM-DD-name-of-post.ext
 
 以下のファイルを _posts に作成してみましょう。
 
-ファイル名: 2016-05-12-my-first-jekyll.markdown
-中身:
+2016-05-12-my-first-jekyll.markdown
 ```
 ---
 layout: post
@@ -224,7 +223,7 @@ jekyll serve すると（すでに他のターミナルでしている場合は�
 _site を確認すると、_site/2016/05/12/my-first-jekyll.html というファイルが生成されています。
 
 
-### Config
+## Config
 
 _config.yml は設定ファイルです。
 あらかじめ用意されている設定項目は https://jekyllrb.com/docs/configuration/ に記載されています。
@@ -237,7 +236,7 @@ twitter_username: jekyllrb
 ```
 テンプレートやコンテンツで
 ```
-{{ site.github_username }}
+{{ site.twitter_username }}
 ```
 のように使うことができ、この部分が jekyllrb に置き換えられます。
 
