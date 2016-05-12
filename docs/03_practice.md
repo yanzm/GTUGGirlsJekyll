@@ -83,7 +83,7 @@ _layouts/default.html
 Bootstrap の Navbar を使うように変更します。
 
 _includes/header.html
-```
+```html
 <nav class="navbar navbar-light bg-faded">
   <div class="container">
     <a class="navbar-brand" href="/">{{ site.title }}</a>
@@ -104,7 +104,7 @@ _includes/header.html
 
 about.md を削除して meetups.md を用意します。
 
-```
+```html
 ---
 layout: page
 title: Meetup Log
@@ -207,7 +207,7 @@ layout: default
 
 ## 7. 画像を用意
 
-img フォルダを作成し、gtug-girls.png を配置する
+img フォルダを作成し、gtug-girls.png を配置する（このリポジトリの img/ の中にあります）
 
 
 ## 8. main.css を用意

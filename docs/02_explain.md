@@ -88,7 +88,7 @@ layout: default
 
 index.html 全体を見てみましょう。
 
-```
+```html
 ---
 layout: default
 ---
@@ -136,7 +136,7 @@ YAML Front Matter に続いてコンテンツ部分である &lt;div&gt; タグ�
 
 _layout/default.html を見ると次のようになっており、```{{ content }}``` 部分が ```<div class="home">...</div>``` に置き換えられた index.html が _site ディレクトリに生成されます。
 
-```
+```html
 <!DOCTYPE html>
 <html>
 
@@ -168,7 +168,7 @@ Jekyll では YAML Front Matter がついたSASSファイル（.scss ファイ�
 
 css/main.scss を見ると、以下のような YAML Front Matter がついています（# の行はコメントです）。
 
-```
+```scss
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
